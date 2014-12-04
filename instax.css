@@ -1,0 +1,30 @@
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: grey;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+header {
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.instagram {
+    overflow: hidden;
+}
+
+.instagram .image {
+    float: left;
+}
+
+img {
+    width: 170px;
+    height: 220px;
+}

@@ -4,6 +4,7 @@
         <title>instax</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="instax.css" rel="stylesheet" type="text/css">
         <script src="jquery-2.1.1.min.js"></script>
         <script type="text/javascript">
 	        $(document).ready(function(){
@@ -33,11 +34,13 @@
         </script>
     </head>
     <body>
-    	<header>
-	    	<input id="search_key" type="text" value=""/>
-	    	<input type="button" id="search_btn" value="送信" />
-	    </header>
-        <div class="instagram"></div>
-        <hr>
+        <div class="container">
+            <header>
+                <h1>instax</h1>
+                <input id="search_key" type="text" value=""/>
+                <input type="button" id="search_btn" value="送信" />
+            </header>
+            <main class="instagram"></main>
+        </div>
     </body>
 </html>
