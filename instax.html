@@ -23,7 +23,7 @@
 	                   },
 	                    success: function(data, textStatus, jqXHR) {
 	                    $(".instagram").text("");
-	                    for (var i = 0, length = 30; i < length; i++) {
+	                    for (var i = 0, length = 100; i < length; i++) {
 	                       var d = data.data[i];
 	                       $(".instagram").append(
 	                       $("<div>").addClass("image").append($("<a>").attr("href", d.link).attr("target", "_blank").append($("<img>").attr("src", d.images.low_resolution.url))));}                   

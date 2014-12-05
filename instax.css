@@ -1,8 +1,19 @@
+@font-face {
+	font-family: title;
+	src: url('ABC.otf') format('opentype')
+}
+
 body {
     width: 100%;
-    margin: 0px;
-    padding: 0px;
-    background: grey;
+    background: #000;
+    background-image: url(img/bg.jpg);
+    
+}
+
+h1 {
+	color: white;
+	font-family: title;
+	margin-bottom: 5px;
 }
 
 .container {
@@ -11,7 +22,6 @@ body {
 }
 
 header {
-    border-bottom: 1px solid black;
     text-align: center;
     padding-bottom: 10px;
 }
@@ -22,9 +32,13 @@ header {
 
 .instagram .image {
     float: left;
+    margin-right: 16px;
+    margin-bottom: 10px;
+    background-color: white;
 }
 
 img {
-    width: 170px;
-    height: 220px;
+    width: auto;
+    height: 147px;
+    padding: 10px 10px 80px 10px;
 }
