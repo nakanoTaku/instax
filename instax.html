@@ -23,12 +23,17 @@
 	                       $(".instagram").text(textStatus);
 	                   },
 	                    success: function(data, textStatus, jqXHR) {
-	                    $(".instagram").text("");
-	                    for (var i = 0, length = 14; i < length; i++) {
-	                       var d = data.data[i];
-	                       $(".instagram").append(
-	                       $("<div>").addClass("image").append($("<a>").attr("href", d.link).attr("target", "_blank").append($("<img>").attr("src", d.images.low_resolution.url))));}                   
-	                    }
+		                    for (var i = 0, length = 14; i < length; i++) {
+		                       var d = data.data[i];
+		                       console.log(d);
+
+		                       var imageTag = $("<a>").attr("href", d.link).attr("target", "_blank").append(
+		                       $("<img>").attr("src", d.images.low_resolution.url)); 
+
+		                       $(".instagram").append(
+		                       $("<div>").addClass("image").append(imageTag).append($("<p>").text(d.user.username)));
+		                    }
+	                	}
 	                });
 	            });
 	        });
