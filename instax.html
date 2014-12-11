@@ -33,10 +33,11 @@
 		                       	$("<img>").attr("src", d.images.low_resolution.url)); 
 
 		                       	$(".instagram").append(
-		                       	$("<div>").addClass("image").append(imageTag).append($("<p>").text(d.user.full_name)));
+		                       	$("<div>").addClass("image").append(imageTag).append(
+		                       		$("<p>").text(d.user.full_name)));
 
 		                       	// 画像クリック時拡大
-								$(".username").colorbox({rel:'username'});
+								$(".username").colorbox({rel:'username', slideshow:true});
 		                    }
 	                	}
 	                });
