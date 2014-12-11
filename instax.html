@@ -14,7 +14,6 @@
 	               var url = "https://api.instagram.com/v1/tags/";
 	               url += $('#search_key').val();
 	               url += "/media/recent?access_token=";
-	               $(".instagram").text("loadding....");
 	               $.ajax({
 	                   url: url,
 	                   data: { 
@@ -25,19 +24,24 @@
 	                       $(".instagram").text(textStatus);
 	                   },
 	                    success: function(data, textStatus, jqXHR) {
+
+	                    	// 赤、チェリーレッド、チェリー、紫、えんじ色、青、水色、ライトグリーン、緑、黄緑、黄色、オレンジ
+	                    	var colorMap = ["#ff7f7f","#ff7fbf","#ff7fff","#bf7fff","#7f7fff","#7fbfff","#7fffff","#7fffbf","#7fff7f","#bfff7f","#ffff7f","#ffbf7f"];
+
 		                    for (var i = 0, length = 14; i < length; i++) {
+						        var color = colorMap[Math.floor(Math.random() * colorMap.length)]
 		                       	var d = data.data[i];
 		                       	console.log(d);
 
-		                       	var imageTag = $("<a>").addClass("username").attr("href", d.images.low_resolution.url).attr("target", "_blank").append(
-		                       	$("<img>").attr("src", d.images.low_resolution.url)); 
+		                       	var imageTag = $("<li>").append($("<a>").addClass("username").attr("href", d.images.low_resolution.url).attr(
+		                       		"target", "_blank").append($("<img>").attr("src", d.images.low_resolution.url))); 
 
 		                       	$(".instagram").append(
 		                       	$("<div>").addClass("image").append(imageTag).append(
-		                       		$("<p>").text(d.user.full_name)));
+		                       		$("<p>").css("color", color).text(d.user.full_name)));
 
 		                       	// 画像クリック時拡大
-								$(".username").colorbox({rel:'username', slideshow:true});
+								$(".username").colorbox({rel:'username'});
 		                    }
 	                	}
 	                });

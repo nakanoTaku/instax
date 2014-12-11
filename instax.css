@@ -3,6 +3,11 @@
 	src: url('ABC.otf') format('opentype')
 }
 
+@font-face {
+    font-family: memo;
+    src: url('sp-setofont.ttf') format('opentype')
+}
+
 body {
     width: 100%;
     background: #000;
@@ -17,7 +22,7 @@ h1 {
 }
 
 .container {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -28,17 +33,29 @@ header {
 
 .instagram {
     overflow: hidden;
+    text-align: center;
 }
 
 .instagram .image {
-    float: left;
     margin-right: 16px;
     margin-bottom: 10px;
     background-color: white;
+    display: inline-block;
+}
+
+.instagram .image li {
+    list-style-type: none;
 }
 
 img {
     width: auto;
-    height: 137px;
-    padding: 10px;
+    height: 130px;
+    padding: 7px;
+}
+
+p {
+    color: black;
+    margin-top: 0px;
+    font-style: memo;
+    font-weight: bold;
 }
