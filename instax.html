@@ -5,7 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="instax.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="colorbox.css">
         <script src="jquery-2.1.1.min.js"></script>
+        <script src="jquery.colorbox.js"></script>
         <script type="text/javascript">
 	        $(document).ready(function(){
 	            $('#search_btn').click(function() {
@@ -24,14 +26,17 @@
 	                   },
 	                    success: function(data, textStatus, jqXHR) {
 		                    for (var i = 0, length = 14; i < length; i++) {
-		                       var d = data.data[i];
-		                       console.log(d);
+		                       	var d = data.data[i];
+		                       	console.log(d);
 
-		                       var imageTag = $("<a>").attr("href", d.link).attr("target", "_blank").append(
-		                       $("<img>").attr("src", d.images.low_resolution.url)); 
+		                       	var imageTag = $("<a>").addClass("username").attr("href", d.images.low_resolution.url).attr("target", "_blank").append(
+		                       	$("<img>").attr("src", d.images.low_resolution.url)); 
 
-		                       $(".instagram").append(
-		                       $("<div>").addClass("image").append(imageTag).append($("<p>").text(d.user.username)));
+		                       	$(".instagram").append(
+		                       	$("<div>").addClass("image").append(imageTag).append($("<p>").text(d.user.full_name)));
+
+		                       	// 画像クリック時拡大
+								$(".username").colorbox({rel:'username'});
 		                    }
 	                	}
 	                });
