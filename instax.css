@@ -3,31 +3,29 @@
 	src: url('ABC.otf') format('opentype')
 }
 
-@font-face {
-    font-family: memo;
-    src: url('sp-setofont.ttf') format('opentype')
-}
-
 body {
     width: 100%;
     background: #000;
-    background-image: url(img/bg.jpg);
-    
+    background-image: url(img/bg.jpg);   
+    color: white;
+    font-family: title;
 }
 
 h1 {
-	color: white;
-	font-family: title;
-	margin-bottom: 5px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    margin-top: 10px;
 }
 
 .container {
     width: 90%;
     margin: 0 auto;
+    text-align: center;
 }
 
 header {
-    text-align: center;
     padding-bottom: 10px;
 }
 
@@ -56,6 +54,10 @@ img {
 p {
     color: black;
     margin-top: 0px;
-    font-style: memo;
     font-weight: bold;
+}
+
+header p {
+    color: white;
+    display: inline-block;
 }
