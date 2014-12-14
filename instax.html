@@ -10,7 +10,7 @@
         <script src="jquery.colorbox.js"></script>
         <script type="text/javascript">
 	        $(document).ready(function(){
-				$('#search_key').on('change', function() {
+	            $('#search_key').on('change', function() {
 	               var url = "https://api.instagram.com/v1/tags/";
 	               url += $('#search_key').val();
 	               url += "/media/recent?access_token=";
@@ -56,7 +56,7 @@
         <div class="container">
             <header>
                 <h1>instax</h1>
-				<h2>instagram hash search</h2>
+                <h2>instagram hash search</h2>
                 <p>#</p>
                 <input id="search_key" type="text" value=""/>
             </header>
