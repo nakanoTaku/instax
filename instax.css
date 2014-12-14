@@ -34,13 +34,18 @@ header {
 .instagram {
     overflow: hidden;
     text-align: center;
+    margin-top: 10px;
 }
 
 .instagram .image {
     margin-right: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: white;
     display: inline-block;
+}
+
+.instagram .image:nth-child(7n) {
+    margin-right: 0px;
 }
 
 .instagram .image li {
