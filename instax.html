@@ -27,7 +27,8 @@
 
 	                    	// 赤、チェリーレッド、チェリー、紫、えんじ色、青、水色、ライトグリーン、緑、黄緑、黄色、オレンジ
 	                    	var colorMap = ["#ff7f7f","#ff7fbf","#ff7fff","#bf7fff","#7f7fff","#7fbfff","#7fffff","#7fffbf","#7fff7f","#bfff7f","#ffff7f","#ffbf7f"];
-
+	                    	// 動的に追加している子要素をクリアする
+	                    	$(".instagram").empty();
 		                    for (var i = 0, length = 14; i < length; i++) {
 						        var color = colorMap[Math.floor(Math.random() * colorMap.length)]
 		                       	var d = data.data[i];
